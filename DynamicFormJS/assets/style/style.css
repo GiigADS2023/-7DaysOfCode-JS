@@ -1,124 +1,137 @@
 /* Estilo geral */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    margin: 20px;
-    padding: 0;
 }
 
-/* Fieldset e legend */
-fieldset {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
+/* Título principal */
 legend {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #555;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos fieldsets */
+fieldset {
+    border: none;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 label {
-    font-size: 0.9em;
+    display: block;
+    margin-bottom: 15px;
     font-weight: bold;
-    color: #444;
+    font-size: 14px;
 }
 
-input {
-    padding: 8px;
-    font-size: 0.9em;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-input:focus {
-    border-color: #007BFF;
-    outline: none;
-}
-
-/* Botões */
-button {
+input.form-field {
+    width: 100%;
     padding: 10px;
-    font-size: 0.9em;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input.form-field:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Mensagem de erro */
+.form-field + .error-message {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Botão de salvar */
+/* Botão de salvar */
+.js-save {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Verde */
+    color: #ffffff;
     border: none;
-    border-radius: 3px;
-    background-color: #007BFF;
-    color: white;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+.js-save:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
 }
 
-button.js-edit {
-    background-color: #28a745;
-}
-
-button.js-edit:hover {
-    background-color: #218838;
-}
-
-button.js-delete {
-    background-color: #dc3545;
-}
-
-button.js-delete:hover {
-    background-color: #c82333;
-}
-
-/* Tabela */
+/* Estilo da tabela */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-th, td {
-    text-align: left;
+table th, table td {
+    border: 1px solid #ccc;
     padding: 10px;
-    font-size: 0.9em;
-    border: 1px solid #ddd;
+    text-align: left;
 }
 
-th {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-}
-
-tbody tr:nth-child(even) {
+table th {
     background-color: #f1f1f1;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    body {
-        margin: 10px;
-    }
+table td {
+    vertical-align: middle;
+}
 
-    table {
-        font-size: 0.8em;
-    }
+table td button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    button {
-        font-size: 0.8em;
-        padding: 8px;
-    }
+/* Botão editar */
+table td .js-edit {
+    color: #007bff; /* Azul */
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+table td .js-edit:hover {
+    color: #0056b3; /* Azul mais escuro no hover */
+    text-decoration: underline;
+}
+
+/* Botão excluir */
+table td .js-delete {
+    color: #dc3545; /* Vermelho */
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+table td .js-delete:hover {
+    color: #c82333; /* Vermelho mais escuro no hover */
+    text-decoration: underline;
 }

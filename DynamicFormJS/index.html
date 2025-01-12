@@ -11,14 +11,18 @@
         <legend>Cadastro de Pessoas</legend>
         <form class="form js-form">
             <label for="name">
-                Nome
-                <input class="form-field js-field" id="name" minlength="3" maxlength="120" name="name" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required type="text">
+                Nome <span style="color: red;">*</span>
+                <input class="form-field js-field" id="name" minlength="3" maxlength="120" name="name" 
+                       pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required type="text">
+                <div class="error-message" id="name-error"></div>
             </label>
+            
             <label for="birth-date">
-                Data de Nascimento
+                Data de Nascimento <span style="color: red;">*</span> 
                 <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
-            </label>            
-            <button type="submit">Salvar</button>
+                <div class="error-message" id="birth-date-error"></div>
+            </label>                                         
+            <button class="js-save" type="submit">Salvar</button>
         </form>
     </fieldset>
     <fieldset>
