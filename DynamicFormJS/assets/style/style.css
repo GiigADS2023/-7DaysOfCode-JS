@@ -1,0 +1,124 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px;
+    padding: 0;
+}
+
+/* Fieldset e legend */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    padding: 8px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Botões */
+button {
+    padding: 10px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 3px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.js-edit {
+    background-color: #28a745;
+}
+
+button.js-edit:hover {
+    background-color: #218838;
+}
+
+button.js-delete {
+    background-color: #dc3545;
+}
+
+button.js-delete:hover {
+    background-color: #c82333;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    font-size: 0.9em;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+
+    button {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
