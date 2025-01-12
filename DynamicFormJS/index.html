@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>CadastroJS - 7DaysOfCode</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Cadastro de Pessoas</legend>
+        <form class="form js-form">
+            <label for="name">
+                Nome
+                <input class="form-field js-field" id="name" minlength="3" maxlength="120" name="name" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required type="text">
+            </label>
+            <label for="birth-date">
+                Data de Nascimento
+                <input class="form-field js-field" id="birth-date" name="birth-date" required type="date">
+            </label>            
+            <button type="submit">Salvar</button>
+        </form>
+    </fieldset>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
